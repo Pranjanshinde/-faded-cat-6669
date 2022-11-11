@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Basket</title>
+    <style>
+        #navigation{
+            width: 90%;
+            display: flex;
+            margin: auto;
+            
+            height: 100px;
+            justify-content: space-between;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+        #forsearch{
+            width:70%;
+        }
+        #small{
+            /* border: 2px solid red; */
+            justify-content: space-evenly;
+            display: flex;
+        }
+        #small>span{
+            display: block;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            width: 220px;
+            text-align: center;
+        }
+        #small>select{
+            display: block;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            width: 220px;
+            text-align: center;
+        }
+        #search-item{
+            font-size: 24px;
+            width: 800px;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        #menu{
+            display: flex;
+            width: 90%;
+            height: 40px;
+            /* border: 2px solid  green; */
+            align-items: center;
+            justify-content: space-evenly;
+            margin: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            border-radius: 7px;
+        }
+        .banner{
+            margin: auto;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 7px;
+        }
+        .banner>img{
+        
+            border-radius: 7px;
+        }
+        #three{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            
+        }
+        #three>div{
+            width: 30%;
+            border-radius: 7px;
+        }
+        #three>div>img{
+            
+            border-radius: 7px;
+        }
+        .category{
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+        .category>div>img{
+            border-radius: 7px;
+        }
+        .category>div>div{
+            font-size: 18px;
+            height: 30px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            align-items: center;
+        }
+        #recipe{
+            width: 90%;
+            text-align: center;
+            margin: auto;
+            margin-top: 15px;
+            border-radius: 7px;
+        }
+        .events{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            justify-content: space-evenly;
+           
+            
+        }
+        .events>div{
+            width: 30%;
+        }
+        .events>div>img{
+            width: 100%;
+            border-radius: 8px;
+        }
+        #brands{
+            display: flex;
+            width: 90%;
+            margin: auto;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+        .info{
+            width: 90%;
+            margin: auto;
+            justify-content: left;
+        }
+        #footer{
+            display: flex;
+            width: 90%;
+            justify-content: space-evenly;
+            margin: auto;
+        }
+        #footer>div{
+            width: 18%;
+        }
+        #footer>div>h3{
+            color:  #708090;
+        }
+        #footer>div>p{
+            color: 	#778899;
+        }
+        #search{
+            display: flex;
+            height: 50px;
+            align-items: center;
+            border: 2px solid green;
+            align-content: left;
+            align-content: center;
+        
+        }
+        #search>a>img{
+            height: 200%;
+           
+        }#displaytable img{
+            width:50px;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="navigation">
+            <div>
+            <img src="./Apna.png" alt="Apna Basket" height="100%" width="200%">
+        </div>
+        <div id="forsearch">
+        <div id="small">
+            <span>Online Slot Availability</span>
+            <span>Fresh & Fast</span>
+            <span>Store Selector</span>
+            <span>Contact Us</span>
+            <select name="city" id="city">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Delhi NCR">Delhi NCR</option>
+            <option value="Bengluru">Bengluru</option>
+            <option value="Thane">Thane</option>
+            <option value="Raigarh">Raigarh</option>
+            <span>Enter Pincode</span>
+            
+           
+        </select>
+        </div>
+        <div id="search">
+        <input type="text" id="search-item" placeholder="Start Shopping..." >
+             <a href="./product_page.html"><img src="data:image/png;base64,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" alt="" height="200%" id="products"></a>
+             <a href="./cartpage.html"><img src="data:image/png;base64,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" alt="" id="cart" height="80%"></a>
+        </div>
+    </div>
+    </div>
+    <div id="menu">
+        <div>SHOP BY CATEGORY \/</div>
+        <div>MY ORDER</div>
+        <div>GIFTING</div>
+        <div>REWARDS</div>
+        <div>BLOG</div>
+        <div>OFFERS</div>
+        <div>CONNOISSEUR’S SELECTION</div>
+        <div>BOOK STORE VISIT</div>
+    </div>
+    <div class="banner">
+        <img src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/40ffdf36-959e-49f1-9c5c-e43639e69a01.png?v=4" alt="" width="1320px" height="376px" >
+
+    </div>
+    </div>
+    <div id="displaytable">
+        <table>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Sub-total</th>
+                <th>Remove from cart</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Append the elements here using JS and DOM  -->
+            </tbody>
+          </table>
+    </div>
+    <h3>Sub-total: Rs. <span id="cart-total"></span></h3>
+    <h3>Delivery-Charges      Rs.50</h3>
+    <h3>TOTAL: Rs. <span id="total-cost"></span></h3>
+
+    <hr color=" #708090">
+    <div id="footer">
+        <div>
+            <h3>DOWNLOAD THE APP</h3>
+            <img src="https://cdn.worldvectorlogo.com/logos/get-it-on-google-play.svg" alt="" width="80%">
+            <img src="https://cdn.worldvectorlogo.com/logos/available-on-the-app-store.svg" alt="" width="80%">
+        </div>
+        <div>
+            <h3>ABOUT US</h3>
+            <P>About Us</P>
+            <P>Our Vision & Purpose</P>
+            <P>Quality Standards</P>
+            <P>Awards</P>
+            <P>FAQs</P>
+            <P>Available Delivery Slot</P>
+            <P>Vendor Connect</P>
+            <h3>CAREERS</h3>
+            <p>Work With Us</p>
+        </div>
+        <div>
+            <h3>NEWS & MEDIA</h3>
+            <p>Press release</p>
+            <p>Newsletters</p>
+            <p>Events</p>
+            <p>Photo Gallary</p>
+            <p>Recipes</p>
+            <p>NBTV</p>
+            <p>Our Virtual Store</p>
+        </div>
+        <div>
+            <h3>OUR POLICIES</h3>
+            <p>Privacy Policy</p>
+            <p>Payment Policy</p>
+            <p>Disclaimer</p>
+            <p>Greviance Officer</p>
+        </div>
+        <div>
+            <h3>SIGN UP TO STAY UPDATED</h3>
+            <input type="email" placeholder="Enter Your Email Address" style="font-size:20px;margin-bottom: 10px;">
+            <button style="color: aliceblue;background-color: greenyellow;font-size: 20px;border: none;">Subscribe</button>
+        </div>
+    </div>
+    
+
+   
+</div>
+    
+</body>
+</html>
+
+
+
+<script>
+    let cartdata=JSON.parse(localStorage.getItem("mycart"));
+    console.log(cartdata);
+    displaydata(cartdata);
+    let sum=0;
+
+    function displaydata(cartdata){
+         document.querySelector("tbody").innerHTML="";
+
+         cartdata.forEach(function(element,index){
+            let row=document.createElement("tr");
+            
+            let picture=document.createElement("td");
+
+            let img=document.createElement("img");
+            img.src=element.avatar;
+            picture.append(img);
+
+
+            let name=document.createElement("td");
+            name.innerText=element.Title;
+            let price=document.createElement("td");
+            price.innerText=element.price;
+
+            let quantity=document.createElement("td");
+            quantity.innerText=2;
+            let cost=((quantity.innerText)*(element.price));
+              
+            let addition=document.createElement("button");
+            addition.innerText="+";
+            addition.addEventListener("click",function(){
+                quantity.innerText++;
+                 cost=((quantity.innerText)*(element.price));
+               
+            });
+
+            let subtract=document.createElement("button");
+            subtract.innerText="-";
+            subtract.addEventListener("click",function(){
+                if(quantity.innerText>1)
+                {
+                    quantity.innerText--;
+                    cost=((quantity.innerText)*(element.price));
+                   
+                }
+            })
+
+            let subtotal=document.createElement("td");
+            subtotal.innerText=cost;
+
+            let remove=document.createElement("td");
+            remove.innerText="X";
+            remove.addEventListener("click",function(){
+                removefromcart(element,index);
+            })
+
+            
+
+            row.append(picture,name,price,addition,quantity,subtract,subtotal,remove);
+            document.querySelector("tbody").append(row);
+
+         })
+    }
+
+
+   for(let i=0;i<cartdata.length;i++)
+   {
+    sum=sum+(cartdata[i].price);
+   }
+   console.log(sum);
+   document.getElementById("cart-total").innerText=sum;
+   document.getElementById("total-cost").innerText=(sum+50);
+
+   function removefromcart(element,index){
+    cartdata.splice(index,1);
+    localStorage.setItem("mycart",JSON.stringify(cartdata));
+    displaydata(cartdata);
+
+   }
+
+</script>
