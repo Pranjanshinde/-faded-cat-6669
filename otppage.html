@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="Mobile" placeholder="Enter mobile Number">
+    <button id="otp">Send OTP</button>
+    <div id="showotp"></div>
+</body>
+</html>
+
+<script>
+    document.getElementById("otp").addEventListener("click",getotp)
+    function getotp(){
+        let number=document.getElementById("Mobile").value;
+        localStorage.setItem("mobile",number);
+        let oyp=document.createElement("input");
+        oyp.placeholder="Enter OTP";
+        let submit=document.createElement("button");
+        submit.innerText="submit";
+        submit.id="otsubmit";
+        document.getElementById("showotp").append(oyp,submit);
+        document.getElementById("otsubmit").addEventListener("click",subotp);
+    function subotp(){
+        location.assign("./loginpage.html");
+    }
+    }
+
+   
+</script>

@@ -118,7 +118,7 @@
     </div>
     <div id="menu">
         <div>SHOP BY CATEGORY \/</div>
-        <div>MY ORDER</div>
+        <a href="./loginpage.html"> <div>MY ORDER</div></a>
         <div>GIFTING</div>
         <div>REWARDS</div>
         <div>BLOG</div>
@@ -138,6 +138,10 @@
         let url="https://636ca1c3ab4814f2b2699397.mockapi.io/products";
         let info=[];
         let cartdata=JSON.parse(localStorage.getItem("mycart")) || [];
+        let frontdata=JSON.parse(localStorage.getItem("frontdata"));
+        console.log(frontdata);
+        
+        
        
         async function getdata(){
             try{
@@ -145,7 +149,8 @@
                 let data=await res.json();
                 info=data;
                 //console.log(data);
-                showdata(info);
+                // showdata(info);
+                let passdata=localStorage.setItem("passdata",JSON.stringify(info));
             }
             catch(err){
                 console.log(err);
@@ -184,13 +189,16 @@
             
 
         }
+        
         //showdata(info);
 
         document.querySelector("#productsite").addEventListener("click",function(){
-            let searchvalue=document.querySelector("#search-item").value;
+            let data=document.querySelector("#search-item").value;
+            // let  data=localStorage.getItem("searchdata");
+            
             //console.log(searchvalue);
             let searchdata=info.filter(function(element,index){
-                return element.Title.toLowerCase().includes(searchvalue.toLowerCase());
+                return element.Title.toLowerCase().includes(data.toLowerCase());
             })
             console.log(searchdata);
             showdata(searchdata);
@@ -203,6 +211,7 @@
             console.log(cartdata);
             localStorage.setItem("mycart",JSON.stringify(cartdata));
         }
+        showdata(frontdata);
 
         
 
