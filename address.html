@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apna Basket</title>
     <style>
-        #navigation{
+  #navigation{
             width: 90%;
             display: flex;
             margin: auto;
@@ -163,39 +161,63 @@
             height: 200%;
            
         }
-        #list{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: auto;
-            gap: 20px;
+     
+        #input{
+            display: flex;
+            justify-content:left;
+            margin-top: 15px;
+            width: 90%;
+            margin: auto;
+
         }
-        #list>div{
+        #details{
+            display: flex;
+            margin-left: 100px;
+
+        }
+        #option{
+            width: 14%;
             /* border: 2px solid red; */
-            text-align: center;
-            padding-bottom: 20px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        }
-        #list>div>img{
-            width: 70%;
-        }
-        #search>a>img{
-            height: 200%;
+            /* margin-left: 40px; */
+            /* width: 400px; */
+            height: fit-content;
            
         }
-        .pricebutton{
-            padding: 8px 11px;
-            border-radius: 5px;
-            border: 2px solid #C0C0C0;
-            background-color: white;
-            margin-right: 15px;
+        #option>div{
+            width: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            justify-content: space-around;
+            height: 30px;
+            align-items: center;
+            padding: 8px 12px;
+            border: 2px solid 	#808080;
+            color: 	#808080;
+         
+        }
+        #details{
+            /* margin-left: 40px; */
+            /* border: 2px solid yellow; */
+            
             
         }
-        .addbutton{
-            padding: 8px 11px;
-            border-radius: 5px;
+        input{
+            font-size: 20px;
+        }
+        #proceed{
+            background-color:#7cfc00 ;
+            padding: 7px 60px;
+            color: white;
             border: 2px solid #7cfc00;
-            background-color: 	#7cfc00;
-            margin-left: 15px;           
+            border-radius: 7px;
+            margin-top: 20px;
+
+        }
+        #details>div:nth-child(2){
+            /* border: 2px solid #7cfc00; */
+            /* padding-top: 100px; */
+            margin-left: 100px;
+            
         }
        
 
@@ -205,7 +227,7 @@
     <div id="container">
         <div id="navigation">
             <div>
-                <img src="./Apna.png" alt="Apna Basket" height="100%" width="200%" id="landpage">
+            <img src="./Apna.png" alt="Apna Basket" height="100%" width="200%" id="landpage">
         </div>
         <div id="forsearch">
         <div id="small">
@@ -220,9 +242,7 @@
             <option value="Bengluru">Bengluru</option>
             <option value="Thane">Thane</option>
             <option value="Raigarh">Raigarh</option>
-            <span>Enter Pincode</span>
-            
-           
+            <span>Enter Pincode</span>   
         </select>
         </div>
         <div id="search">
@@ -234,7 +254,7 @@
     </div>
     <div id="menu">
         <div>SHOP BY CATEGORY \/</div>
-        <div id="order">MY ORDER</div>
+        <div>MY ORDER</div>
         <div>GIFTING</div>
         <div>REWARDS</div>
         <div>BLOG</div>
@@ -243,8 +263,35 @@
         <div>BOOK STORE VISIT</div>
     </div>
     </div>
-    <div id="list">
-        <!-- i will append all product shere -->
+    <div id="input">
+        <div id="option">
+            <div id="detail"> <p>Accout Details</p> <p>></p>  </div>
+            <div id="address"> <p> Address Book</p><p>></p></div>
+            <div> <p>My Favourites</p><p>></p> </div>
+            <div>  <p>  My Orders</p><p>></p>  </div>
+            <div> <p>My Rewards</p> <p>></p>  </div>
+            <div> <p>My Membership</p><p>></p>  </div>
+            <div> <p>My Wallet</p><p>></p>  </div>
+            <div> <p>My NBCash </p><p>></p> </div>
+        </div>
+        <div id="details">
+            <div>
+            
+                <h3>Address Details</h3>
+                <input type="text" placeholder="Enter Address Detils">
+                <h3>Pincode</h3>
+                <input type="number" placeholder="Pincode"><br>
+                <button id="proceed">Submit</button>
+
+        </div>
+        <div>
+            <h3>Ladmark</h3>
+            <input type="text" placeholder="Enter Landmark" id="last">
+            <h3>City</h3>
+            <input type="text" id="dob" placeholder="Enter City">
+
+        </div>
+        </div>
 
     </div>
     <hr color=" #708090">
@@ -289,117 +336,31 @@
             <button style="color: aliceblue;background-color: greenyellow;font-size: 20px;border: none;">Subscribe</button>
         </div>
     </div>
-    
     </body>
     </html>
-
     <script>
-        let url="https://636ca1c3ab4814f2b2699397.mockapi.io/products";
-        let info=[];
-        let cartdata=JSON.parse(localStorage.getItem("mycart")) || [];
-        let frontdata=JSON.parse(localStorage.getItem("frontdata"));
-        console.log(frontdata);
-        
-        
-       
-        async function getdata(){
-            try{
-                let res=await fetch(url);
-                let data=await res.json();
-                info=data;
-                //console.log(data);
-                // showdata(info);
-                let passdata=localStorage.setItem("passdata",JSON.stringify(info));
-            }
-            catch(err){
-                console.log(err);
-            }
-        }
-        getdata();
-
-        function showdata(info){
-            console.log(info);
-            document.getElementById("list").innerHTML="";
-
-            info.forEach(function(element,index){
-                let box=document.createElement("div");
-
-                let image=document.createElement("img");
-                image.src=element.avatar;
-
-                let title=document.createElement("h3");
-                title.innerText=element.Title;
-
-                let quantity=document.createElement("h2");
-                quantity.innerText="1 pkt";
-
-                let price=document.createElement("button");
-                price.className="pricebutton";
-                price.innerText="Rs."+element.price;
-
-                let add=document.createElement("button");
-                add.className="addbutton";
-                add.innerText="add";
-                add.addEventListener("click",function(){
-                    alert("Item adet to cart")
-                    addtocart(element,index);
-                })
-
-                box.append(image,title,quantity,price,add);
-                document.getElementById("list").append(box);
-            })
-            
-
-        }
-        
-        //showdata(info);
-
-        document.querySelector("#productsite").addEventListener("click",function(){
-            let data=document.querySelector("#search-item").value;
-            // let  data=localStorage.getItem("searchdata");
-            
-            //console.log(searchvalue);
-            let searchdata=info.filter(function(element,index){
-                return element.Title.toLowerCase().includes(data.toLowerCase());
-            })
-            console.log(searchdata);
-            showdata(searchdata);
-        
-
+        document.getElementById("proceed").addEventListener("click",function(){
+            alert("Order is Dispatched with order no. id1564561");
+            location.assign("./index.html");
+        })
+        document.getElementById("detail").addEventListener("click",function(){
+            location.assign("./loginpage.html");
         });
+        
 
-        function addtocart(element,index){
-            cartdata.push(element);
-            console.log(cartdata);
-            localStorage.setItem("mycart",JSON.stringify(cartdata));
-        }
-        showdata(frontdata);
-
-        document.getElementById("cart").addEventListener("click",function(){
-        location.assign("./cartpage.html"); 
-    })
-
-    
-    document.getElementById("order").addEventListener("click",function(){
-        location.assign("./otppage.html"); 
-    })
-    
-    document.getElementById("landpage").addEventListener("click",function(){
+        document.getElementById("landpage").addEventListener("click",function(){
         location.assign("./index.html"); 
     })
 
+    document.getElementById("cart").addEventListener("click",function(){
+        location.assign("./cartpage.html"); 
+    })
 
-        
+    document.getElementById("productsite").addEventListener("click",function(){
+        location.assign("./product_page.html"); 
+    })
 
-
-        
-
-   
-
-      
-
-    
-
-
-        
+    document.getElementById("address").addEventListener("click",function(){
+        location.assign("./address.html"); 
+    })
     </script>
