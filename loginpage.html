@@ -159,6 +159,19 @@
             height: 200%;
            
         }
+        #input{
+            display: flex;
+            justify-content: center;
+
+        }
+        #details{
+            display: flex;
+        }
+        #option{
+            width: 20%;
+            border: 2px solid red;
+            margin-left: 40px;
+        }
        
 
     </style>
@@ -182,9 +195,7 @@
             <option value="Bengluru">Bengluru</option>
             <option value="Thane">Thane</option>
             <option value="Raigarh">Raigarh</option>
-            <span>Enter Pincode</span>
-            
-           
+            <span>Enter Pincode</span>   
         </select>
         </div>
         <div id="search">
@@ -203,175 +214,46 @@
         <div>CONNOISSEUR’S SELECTION</div>
         <div>BOOK STORE VISIT</div>
     </div>
-    <div class="banner">
-        <img src="https://gnbdevcdn.s3-ap-southeast-1.amazonaws.com/Marketing/d8cc09f5-5d68-4853-ae9a-233ceabe3acd.jpg?v=14" alt="" width="1320px" height="376px" >
+    </div>
+    <div id="input">
+        <div id="option">
+            <div>Accout Details</div>
+            <div>Address Book</div>
+            <div>My Favourites</div>
+            <div>My Orders</div>
+            <div>My Rewards</div>
+            <div>My Membership</div>
+            <div>My Wallet</div>
+            <div>My NBCash</div>
+        </div>
+        <div id="details">
+            <div>
+            <h1>ACCOUNT DETAILS</h1>
+            <P>Mobile Number: <span id="number"></span></P>
+            <p>First Name</p>
+            <input type="text" placeholder="Enter First Name" id="name">
+            <p>Email</p>
+            <input type="email" id="mail" placeholder="Enter Email Address">
+            <h2>SUBSCRIPTION  PREFERENCES</h2>
+            <input type="radio" id="reference" value="Updates & Promotions" name="c1">
+            <label for="reference">Updates & Promotions</label>
+            <input type="radio" id="ref2" value="Product Availability & Notifications" name="c2">
+            <label for="ref2">Product Availability & Notifications</label>
+            <button>Submit Your Details</button>
+        </div>
+        <div>
+            <p>Last Name</p>
+            <input type="text" placeholder="Enter Last Name" id="last">
+            <p>Date of Birth</p>
+            <input type="date" id="dob">
+
+        </div>
+        </div>
 
     </div>
-    <div class="banner">
-        <img src="https://d1z88p83zuviay.cloudfront.net/BannerImages/a5ad3541-5426-47e1-b33c-0360c5e28c35_1320x376.jpg" alt="" width="1320px" height="376px">
+    </body>
+    </html>
 
-    </div>
-    <div id="three">
-        <div>
-            <img src="https://www.naturesbasket.co.in/Images/NaturesBasketGifting.jpeg?v=8" alt="" width="100%">
-
-        </div>
-        <div>
-            <img src="https://www.naturesbasket.co.in/Images/Fruits-Vegetables.png?v=17" alt="" width="100%">
-        </div>
-        <div>
-            <img src="https://www.naturesbasket.co.in/Images/Gluten-free-web%20box%20banner.png?v=15" alt="" width="100%">
-        </div>
-    </div>
-    <h2 style="text-align:center ;">SHOP BY CATEGORY</h2>
-    <div class="category">
-        <div>
-    <img src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/Exoticvegetablesweb.png" alt="">
-    <div> <b> Exotic vegetables</b> </div>
-    <div>Asparagus Artichokes</div>
-    <div>Avocados Peppers</div>
-    <div>Broccoli Zucchini</div>
-    <div style="color:green ;">View All</div>
-        </div>
-        <div>
-            <img src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/coldcutweb.png" alt="">
-            <div> <b> Meat, Poultry & Seafood</b> </div>
-            <div>Chicken Cuts Lollipops Mince</div>
-            <div>Fish Other Seafood</div>
-            <div>Fresh Kebabs Others</div>
-            <div style="color:green ;"> View All</div>  
-        </div>
-        <div>
-            <img src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/Freshartisinalbreadsweb.png" alt="">
-            <div> <b> Fresh Artisanal Breads</b> </div>
-            <div> Breadsticks Crostinni Lavache</div>
-            <div>Buns Croissants Bagels</div>
-            <div>Muffins Cakes Brownies</div>
-            <div style="color:green ;">View All</div>
-        </div>
-        <div>
-            <img src="https://gnbdevcdn.s3.amazonaws.com/Images/Category/dailyessentialsweb.png" alt="">
-            <div> <b> Daily Essentials</b> </div>
-            <div>Snacks & Beverages</div>
-            <div>Breakfast, Dairy & Bakery</div>
-            <div>Staples</div>
-            <div style="color:green ;">View All</div>
-        </div>
-        </div>
-        <div id="recipe">
-            <img src="https://www.naturesbasket.co.in/Images/homepageblogbanner/NB_pastaBlog_banner.jpg" alt="" style="border-radius:7px ;">
-        </div>
-        <h2 style="text-align: center;">Our Events</h2>
-        <div class="events">
-            <div>
-                <img src="https://www.naturesbasket.co.in/Images/PhotoGallery/SanjeevKapoor_at_KolkataGallary.jpg" alt="">
-            </div>
-            <div>
-                <img src="https://www.naturesbasket.co.in/Images/PhotoGallery/Food-Trend-report-Launch.jpg" alt="">
-            </div>
-            <div>
-                <img src="https://www.naturesbasket.co.in/Images/PhotoGallery/American-Food-Festival---Cheef-Saby-Vicky-Ratnani.jpg" alt="">
-            </div>
-        </div>
-        <h2 style="text-align: center;">SHOP BY WORLD BRANDS</h2>
-        <div id="brands">
-            <div>
-                <img src="https://d1z88p83zuviay.cloudfront.net/Images/davidoff-cafe.jpg" alt="">
-            </div>
-            <div>
-                <img src="https://d1z88p83zuviay.cloudfront.net/Images/healthy.jpg" alt="">
-            </div>
-            <div>
-                <img src="https://d1z88p83zuviay.cloudfront.net/Images/cambay-tiger.jpg" alt="">
-            </div>
-            <div>
-                <img src="https://d1z88p83zuviay.cloudfront.net/Images/ceres.jpg" alt="">
-            </div>
-            <div>
-                <img src="https://d1z88p83zuviay.cloudfront.net/Images/silk.jpg" alt="">
-            </div>
-        </div>
-        <div class="info">
-        <h3>Online Grocery Store India</h3>
-        <p>Apna Basket is a grocery store operating in Mumbai, Bangalore and Pune with deliveries to all cities across India including Hyderabad, Delhi, Kolkata, Chennai, Surat and more. We offer a wide range of food products for all your everyday needs and even offer grocery home delivery as well as a grocery shop online for you to purchase from. Our online grocery store has fresh fruits and vegetables, fresh and frozen meats and seafood, a wide range of breads and other packaged bakery products as well as a range of fresh cheeses from around the world. We even have a range of every staple and international cuisine product to meet your needs along with organic products for fresh and packaged food items. With our offerings, we have the best online food shop & online grocery shopping platform available for all your grocery products as well as physical grocery stores in select cities.</p>
-        <h3>Best Online Grocery Supermarket India</h3>
-    <p>With stores in Mumbai, Pune and Bangalore and online delivery services, you can now have all your grocery supermarket shopping done online. We have a wide range of grocery products to offer at our stores for you to buy groceries from a channel convenient to you. Choose from fresh produce to packaged goods, buy groceries online and get them delivered straight to your doorstep, thus making it a convenient and quick process. You can pay for the shopping using credit cards, cash, coupons or online banking facility. We are sure to have all the grocery products for your daily dietary needs from regular local Indian brands and products to exotic and international imported ones</p>
-    <h3>Online Grocery Supermarket Shopping India</h3>
-    <p>With our wide range of groceries available, Nature’s Basket is a large online supermarket and grocery store for all your everyday food needs. We offer you the best quality grocery products which you can buy online and have them delivered to you conveniently. We have our grocery stores in Mumbai, Pune and Bangalore where you can buy groceries and food items. We also have the best online grocery store to shop for fruits and vegetables, meats and seafood, breads and other bakery items as well as cheese and dairy. Order groceries online from the best quality grocery store at best prices.</p>
-    </div>
-    <hr color=" #708090">
-    <div id="footer">
-        <div>
-            <h3>DOWNLOAD THE APP</h3>
-            <img src="https://cdn.worldvectorlogo.com/logos/get-it-on-google-play.svg" alt="" width="80%">
-            <img src="https://cdn.worldvectorlogo.com/logos/available-on-the-app-store.svg" alt="" width="80%">
-        </div>
-        <div>
-            <h3>ABOUT US</h3>
-            <P>About Us</P>
-            <P>Our Vision & Purpose</P>
-            <P>Quality Standards</P>
-            <P>Awards</P>
-            <P>FAQs</P>
-            <P>Available Delivery Slot</P>
-            <P>Vendor Connect</P>
-            <h3>CAREERS</h3>
-            <p>Work With Us</p>
-        </div>
-        <div>
-            <h3>NEWS & MEDIA</h3>
-            <p>Press release</p>
-            <p>Newsletters</p>
-            <p>Events</p>
-            <p>Photo Gallary</p>
-            <p>Recipes</p>
-            <p>NBTV</p>
-            <p>Our Virtual Store</p>
-        </div>
-        <div>
-            <h3>OUR POLICIES</h3>
-            <p>Privacy Policy</p>
-            <p>Payment Policy</p>
-            <p>Disclaimer</p>
-            <p>Greviance Officer</p>
-        </div>
-        <div>
-            <h3>SIGN UP TO STAY UPDATED</h3>
-            <input type="email" placeholder="Enter Your Email Address" style="font-size:20px;margin-bottom: 10px;">
-            <button style="color: aliceblue;background-color: greenyellow;font-size: 20px;border: none;">Subscribe</button>
-        </div>
-    </div>
-    
-
-   
-</div>
-    
-</body>
-</html>
-
-
-<script>
-    let mydata=JSON.parse(localStorage.getItem("passdata"));
-    console.log(mydata);
-    document.querySelector("#products").addEventListener("click",function(){
+    <script>
         
-        let searchdata=document.getElementById("search-item").value;
-        console.log(searchdata);
-        localStorage.setItem("searchdata",searchdata);
-        let frontdata=mydata.filter(function(element,index){
-            return element.Title.toLowerCase().includes(searchdata.toLowerCase());
-        });
-        console.log(frontdata);
-        localStorage.setItem("frontdata",JSON.stringify(frontdata));
-        location.assign("./product_page.html");
-        console.log("hiii");
-      
-        
-    
-    });
-   
-
-
-</script>
-
-<!-- <a href="./product_page.html" style="height: 20px;border: 2px solid green;" id="productsite"> </a> -->
+    </script>

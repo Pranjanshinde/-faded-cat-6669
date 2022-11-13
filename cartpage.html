@@ -198,9 +198,9 @@
     </div>
     </div>
     <div id="menu">
-        <div>SHOP BY CATEGORY \/</div>
-        <div>MY ORDER</div>
-        <div>GIFTING</div>
+        <div>SHOP BY CATEGORY \/</div>     
+        <a href="./loginpage.html"> <div>MY ORDER</div></a>
+       <div>GIFTING</div>
         <div>REWARDS</div>
         <div>BLOG</div>
         <div>OFFERS</div>
@@ -289,7 +289,7 @@
     let cartdata=JSON.parse(localStorage.getItem("mycart"));
     console.log(cartdata);
     displaydata(cartdata);
-    let sum=0;
+   
 
     function displaydata(cartdata){
          document.querySelector("tbody").innerHTML="";
@@ -310,7 +310,7 @@
             price.innerText=element.price;
 
             let quantity=document.createElement("td");
-            quantity.innerText=2;
+            quantity.innerText=1;
             let cost=((quantity.innerText)*(element.price));
               
             let addition=document.createElement("button");
@@ -339,6 +339,7 @@
             remove.innerText="X";
             remove.addEventListener("click",function(){
                 removefromcart(element,index);
+
             })
 
             
@@ -348,21 +349,24 @@
 
          })
     }
-
+    let sum=0;
 
    for(let i=0;i<cartdata.length;i++)
    {
     sum=sum+(cartdata[i].price);
    }
    console.log(sum);
+   
+
    document.getElementById("cart-total").innerText=sum;
    document.getElementById("total-cost").innerText=(sum+50);
+   
+
 
    function removefromcart(element,index){
     cartdata.splice(index,1);
     localStorage.setItem("mycart",JSON.stringify(cartdata));
     displaydata(cartdata);
-
    }
 
 </script>
