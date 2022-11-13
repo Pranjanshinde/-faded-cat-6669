@@ -5,8 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #landpage{
+            width: 200px;
+            display: block;
+            margin: auto;
+        }
+        #Mobile{
+            font-size: 20px;
+            display: block;
+            margin: auto;
+            margin-top: 30px;
+        }
+        #otp{
+            font-size: 20px;
+            display: block;
+            margin: auto;
+            margin-top: 30px; 
+        }
+        #enter{
+            font-size: 20px;
+            display: block;
+            margin: auto;
+            margin-top: 30px; 
+        }
+        #otsubmit{
+            font-size: 20px;
+            display: block;
+            margin: auto;
+            margin-top: 30px; 
+        }
+    </style>
 </head>
 <body>
+    <img src="./Apna.png" alt="Apna Basket" id="landpage" >
     <input type="number" id="Mobile" placeholder="Enter mobile Number">
     <button id="otp">Send OTP</button>
     <div id="showotp"></div>
@@ -16,10 +48,12 @@
 <script>
     document.getElementById("otp").addEventListener("click",getotp)
     function getotp(){
+        alert("OTP dent on registred mobile number")
         let number=document.getElementById("Mobile").value;
         localStorage.setItem("mobile",number);
         let oyp=document.createElement("input");
         oyp.placeholder="Enter OTP";
+        oyp.id="enter";
         let submit=document.createElement("button");
         submit.innerText="submit";
         submit.id="otsubmit";
